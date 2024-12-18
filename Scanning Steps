@@ -1,0 +1,224 @@
+Dirsearch
+Fuff
+Wfuzz
+seclist
+httpx
+knockpy
+xsstrike
+Burpsuite
+nmap
+sqlmap
+ping
+traceroute
+subfinder
+xsser-master
+xss-vibes
+amaas
+Sublister
+searchsploitcd ..
+metasploit
+unshadow tool to join passwd/ and shadow file
+john to crack passwords
+netstate for connections and ports
+xss_vibes
+xssstrike
+Openredirex
+Dalfox
+nf -d domain 
+nuclie
+paramaretize
+naabu
+sherlock
+gospider
+webanalyze
+anonsurf
+Xspear
+MHDDOS
+hashcat for hash function
+SecretFinder.py 
+Dirb directoory search
+
+
+
+proxy tool 
+
+
+Use katana -u "https://Url" -o Outputfile | 
+use Dow/zibfiles/xss_vibes/main.py
+use openredirex 
+cat urls.txt| openredirex -p payloads.txt -k "FUZZ" -c 50
+install openredirex FUzzing parameter.
+
+
+
+
+webanalyze -host http://newedealer.jawwal.ps -crawl 2
+
+For Files inclusion use
+https://www.youtube.com/watch?v=FqnSAa2KmBI
+exiftool -Comment="This is a sample comment" image.jpg
+Openredirection tool 
+ffuf -w /u
+
+
+https://www.youtube.com/watch?v=PHf_S9Vis-I
+
+
+jq -r 'keys[1:100][]' jawwal.ps_2024_08_08_09_15_40.json | httpx -status-code  -title -tech-detect | grep "200" | awk -F[' '] {'print $1'} && grep "302" | awk -F[' '] {'print $1'}
+
+
+
+
+-recursion -recursion-depth 1 -e .php -v 
+./httpx -status-code -title -tech-detect -list /home/kali/Desktop/scaning/katana-scan/jaw-pal-subdomain.txt
+
+using gau,katana tool to get all the urls.
+https://www.youtube.com/watch?v=7EXPQtu8PNE
+use grep "=https" to get all the vulnerabile.
+to check for IP.
+https://bgp.he.net/
+
+
+
+ 
+
+https://github.com/vavkamil/awesome-bugbounty-tools?tab=readme-ov-file#Fuzzing
+
+----------------------------------**********************	Scanning Steps	*************************--------------------------------------
+----------------------------------**********************			*************************--------------------------------------
+
+
+	- Find domains and subdomains using ("amass","knockpy","subfinder","Sublist3er")  
+	- nmap scan for open ports: Read Nmap Document sent i Telegram 80/443
+	- port 
+	- check searchsploit for CVE and security Vul
+		
+		curl https://cvedb.shodan.io/cves | jq | grep "cve" | grep "44131"
+
+	- Check for Files php/python code:
+	- Use katana To get all URLs 
+	- Fuzzing using ffuf/Wfuzz:
+	
+	ffuf -u https://10.102.220.176/FUZZ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -e .php,.html,.txt -recursion -recursion-depth 2 -t 50
+
+	- Fuzzing API,Dir,Ext,files, 
+	- Fuzzing What is the DB
+	- Encode fuzzing 
+	- Fuzzing pathes Directory.
+	- fuzzing file path
+	- fuzzing parameter in path
+	- fuzzing HTTP MEthods allowed
+	- 
+- Injection SQL steps 
+	- using our own Fuzzing files
+	- using Wfuzz tool Documentaion 	
+	WFUZZ Tool Document:
+	wfuzz -w wordlist.txt -f output.txt --hc 404 --follow http://example.com/FUZZ
+- CSRF Tooken Required:
+
+In CSRF 
+	--> a relevent acitiom must be there
+	--> 
+	--> 
+	--> 
+	--> Must be check with the CSRF POC Test.
+	--> you can generate a URL to do somtheing in the webpage.
+- Use xss tools
+- Opertedirex 
+- Dalfox
+- xssstrike
+
+8.Must learn Client desynk
+9.check dns records with Dns collaborator.
+10.Check Dom Invador from burpextintion.
+11.check for .execute commands.
+
+
+Use ReadURl.sh file to get all urls and user Openredirection tool 
+
+
+Watcher Work:
+--> Subdomains for: jawwal,paltel,reach,hadara,cloud
+--> Run Check-Domain.sh script to run subfinder and check 200 ok by httpx
+--> Run Check-katana.sh for get all urls 
+--> Run compare_websites.sh to get differance
+--> send Email 
+1. Api key watcher must be configured will
+2. paltel and jawwal services watcher for new services
+
+start scanning jawwal paltel websites,
+
+katana urls 
+
+port scan naabu
+
+
+what is required for web sec is javascript
+
+
+For jawwal and paltel scan;
+
+--- subfinder	---	get subdomains
+--- katana	---	get all urls
+--- wget 	---	get all website data
+--- shodan 
+
+you can change request add content header type "content-Type" 
+Added header 'Content-Type' with the following value 'application/x-www-form-urlencoded'
+Added header 'Accept-Encoding' with the following value 'gzip, deflate'
+
+
+
+1. aman.paltel.ps // parentelcontrol.paltel.ps //https://contentfiltering.paltel.ps
+2. https://antispam.hadara.ps HADARA
+3. https://ccloud.hadara.ps ports open but system down
+4. https://ecareer.jawwal.ps/#/login 
+
+
+
+----------------------------------www.infosecmatter.com-----------------------------------
+-------------------------------------- PORt Testing --------------------------------------
+---> sudo nmap -sS -sC -sV -v -P 80  10.100.2.12
+
+Port = 445 
+service = microsoft-ds - Microsoft Directory Services
+Protocol used = SMB - Server Message Block
+	
+Steps: 
+nmap <ip> -p 445 
+Search for nmap script ls -la /usr/share/nmap/scripts | grep -e "smb"  
+check scripts
+
+nmap  -p 445 --script smb-server-stats --script-args smbusername=administrator,smbpassword=smbuser_771 10.100.202.13
+
+--> nmap <ip> -p 445  --script smb-protocols
+--> nmap 10.100.202.13 -p 445 --script=smb-os-discovery
+--> sudo nmap --script smb-enum-shares 10.100.202.13 -p 445 
+--> sudo nmap --script smb-enum-users 10.100.2.12 -p 445
+
+--> check smbV? and NT LM 0.12
+--> sudo nmap --script smb-vuln-ms17-010 10.100.2.12 -p 445
+--> Connect smbclient //10.100.2.12/IPC$ -U root
+
+
+cat input_file.txt | xargs -I {} python3 /home/kali/Downloads/Tools\ -\ D/secretfinder/SecretFinder.py -i {} -o cli
+
+-------------------------------------- Network Testing --------------------------------------
+---------------------------------------------------------------------------------------------
+
+host www.example.com
+dig www.example.com +short
+getent ahosts www.example.com
+
+Rule number 1: Resolve the target hostname to IP address(es)
+Rule number 2: Ensure that you are going to scan the right IP address(es)
+Rule number 3: Select the right port scan strategy
+
+determine if website is using CDN
+
+Method 1: Online tools to identify CDN
+https://www.cdnplanet.com/tools/cdnfinder/
+https://www.whatsmycdn.com/
+https://builtwith.com/
+
+
